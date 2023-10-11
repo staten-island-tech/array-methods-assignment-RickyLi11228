@@ -9,15 +9,17 @@ const students = [{
     lastname: "Yippee", 
     intelligent: false, 
     graduating: false, 
-    siblings: ["Tap","Yap"],
+    siblings: ["Tap","Yap"]
 },{
     firstname: "Devin", 
     lastname: "Chen", 
     intelligent: false, 
     graduating: false,
-    siblings: ["none"],
+    siblings: false,
 }]
 students.forEach((student)=> console.log(student.siblings))
 students.forEach((student)=> console.log(student.firstname))
-const graduates = students.filter((student) => student.graduating === true)
-console.log(graduates)
+const graduating = students.filter((student) => student.graduating === true)
+console.log(graduating)
+const siblings = students.filter((student) => student.siblings !== false)
+console.log(siblings)
